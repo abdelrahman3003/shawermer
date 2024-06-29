@@ -443,7 +443,7 @@ class HomeView extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "200 EGP",
+                  "200 EGPe",
                   style: TextStyle(
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w700,
