@@ -4,6 +4,7 @@ import 'package:shawermer/core/services/services.dart';
 
 class LocalController extends GetxController {
   Locale? language;
+
   AppServices appServices = Get.put(AppServices());
   bool iseng = true;
   changeLanguage(String codelang) {
