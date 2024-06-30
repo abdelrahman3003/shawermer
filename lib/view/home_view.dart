@@ -450,7 +450,7 @@ class HomeView extends StatelessWidget {
               children: [
                 Expanded(
                   child: Text(
-                    "TAX",
+                    "Total",
                     style: TextStyle(
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w700,
@@ -485,6 +485,27 @@ class HomeView extends StatelessWidget {
               ],
             ),
             Image.asset(AssetsImage.frame4),
+            ElevatedButton(
+              onPressed: () async{
+                  String? path = await  controller.savePdf();
+                if (path != null) {
+                  await controller.printPdf(path);
+                }
+              
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.black,
+                minimumSize: const Size(
+                    double.infinity, 50), // Set button width and height
+              ),
+              child: Text(
+                'Print',
+                style: TextStyle(
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white),
+              ),
+            ),
           ],
         ),
       ),

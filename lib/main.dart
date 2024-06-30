@@ -11,8 +11,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await inialServices();
 
-  await initializeDateFormatting(
-      AppServices().sharedPreferences.getString('lang'));
+  await initializeDateFormatting();
   runApp(const Shawermer());
 }
 
