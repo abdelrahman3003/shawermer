@@ -1,14 +1,10 @@
 import 'dart:io';
-import 'dart:typed_data';
-
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:printing/printing.dart';
 import 'package:shawermer/core/services/services.dart';
 import 'package:pdf/widgets.dart' as pw;
-import 'package:pdf/pdf.dart';
 
 class HomeController extends GetxController {
   AppServices appServices = Get.put(AppServices());
@@ -52,7 +48,7 @@ class HomeController extends GetxController {
 
     await Printing.sharePdf(
       bytes: pdfBytes,
-      filename: 'example.pdf',
+      filename: 'example1.pdf',
     );
   }
 }
