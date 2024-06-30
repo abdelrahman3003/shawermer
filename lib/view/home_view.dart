@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:shawermer/controller/home_controller.dart';
 import 'package:shawermer/core/constatnt/assets.dart';
 
 class HomeView extends StatelessWidget {
@@ -8,6 +10,7 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var controller = Get.put(HomeController());
     return Scaffold(
         body: Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -25,18 +28,29 @@ class HomeView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "545",
+                        controller.numeralFormat.format(543),
                         style: TextStyle(
                           fontSize: 24.sp,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
-                      Text(
-                        "#54545",
-                        style: TextStyle(
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w700,
-                        ),
+                      Row(
+                        children: [
+                          Text(
+                            "#",
+                            style: TextStyle(
+                              fontSize: 12.sp,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          Text(
+                            controller.numeralFormat.format(54545),
+                            style: TextStyle(
+                              fontSize: 12.sp,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -52,9 +66,9 @@ class HomeView extends StatelessWidget {
                             fontWeight: FontWeight.w400,
                           ),
                         ),
-                        const SizedBox(width: 20),
+                        const SizedBox(width: 30),
                         Text(
-                          "20/5/2024",
+                          controller.dateFormat.format(DateTime.now()),
                           style: TextStyle(
                             fontSize: 12.sp,
                             fontWeight: FontWeight.w400,
@@ -71,9 +85,10 @@ class HomeView extends StatelessWidget {
                             fontWeight: FontWeight.w400,
                           ),
                         ),
-                        const SizedBox(width: 20),
+                        const SizedBox(width: 60),
                         Text(
-                          "03:40 PM",
+                          controller.timeFormat.format(controller.timeFormat.parse(
+                              "${DateTime.now().hour}:${DateTime.now().minute} PM")),
                           style: TextStyle(
                             fontSize: 12.sp,
                             fontWeight: FontWeight.w400,
