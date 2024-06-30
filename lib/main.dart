@@ -6,11 +6,10 @@ import 'package:shawermer/core/localization/translations.dart';
 import 'package:shawermer/core/services/services.dart';
 import 'package:shawermer/view/home_view.dart';
 
-void main()async {
-    WidgetsFlutterBinding.ensureInitialized();
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await inialServices();
   runApp(const Shawermer());
-  
 }
 
 class Shawermer extends StatelessWidget {
@@ -25,7 +24,6 @@ class Shawermer extends StatelessWidget {
       // Use builder only if you need to use library outside ScreenUtilInit context
       builder: (_, child) {
         return GetMaterialApp(
-          locale: controller.language,
           translations: AppTrnaslations(),
           debugShowCheckedModeBanner: false,
           title: 'First Method',
