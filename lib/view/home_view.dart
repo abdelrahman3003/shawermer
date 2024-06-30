@@ -60,7 +60,7 @@ class HomeView extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          "date".tr,
+                          "Date",
                           style: TextStyle(
                             fontSize: 12.sp,
                             fontWeight: FontWeight.w400,
@@ -79,7 +79,7 @@ class HomeView extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          "time".tr,
+                          "Time",
                           style: TextStyle(
                             fontSize: 12.sp,
                             fontWeight: FontWeight.w400,
