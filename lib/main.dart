@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:intl/date_symbol_data_file.dart';
+import 'package:intl/intl.dart';
 import 'package:shawermer/core/localization/local_controller.dart';
 import 'package:shawermer/core/localization/translations.dart';
 import 'package:shawermer/core/services/services.dart';
 import 'package:shawermer/view/home_view.dart';
 
-void main()async {
-    WidgetsFlutterBinding.ensureInitialized();
+void main() async {
+
+  WidgetsFlutterBinding.ensureInitialized();
   await inialServices();
   runApp(const Shawermer());
-  
 }
 
 class Shawermer extends StatelessWidget {
