@@ -48,7 +48,7 @@ class HomeController extends GetxController {
 
     await Printing.sharePdf(
       bytes: pdfBytes,
-      filename: 'example1.pdf',
+      filename: 'example.pdf',
     );
   }
 }
