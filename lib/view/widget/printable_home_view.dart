@@ -1,10 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:pdf/pdf.dart';
-import 'package:printing/printing.dart';
 import 'package:shawermer/controller/home_controller.dart';
-import 'package:shawermer/core/constatnt/assets.dart';
 import 'package:pdf/widgets.dart' as pw;
 
 pw.Widget buildPrintableHomeView1({frame1, frame2}) {
@@ -247,6 +243,13 @@ pw.Widget buildPrintableHomeView1({frame1, frame2}) {
           ],
         ),
       ),
+    ]),
+  );
+}
+
+pw.Widget buildPrintableHomeView2({frame3, frame4}) {
+  return pw.Column(
+    children: [
       pw.Padding(
         padding: const pw.EdgeInsets.symmetric(horizontal: 16, vertical: 5),
         child: pw.Row(
@@ -323,18 +326,11 @@ pw.Widget buildPrintableHomeView1({frame1, frame2}) {
           ],
         ),
       ),
-    ]),
-  );
-}
-
-pw.Widget buildPrintableHomeView2({frame3, frame4}) {
-  return pw.Column(
-    children: [
       pw.Row(
         children: [
           pw.Expanded(
             child: pw.Text(
-              "1x حواوشي",
+              "1x Hahashi",
               style: pw.TextStyle(
                 fontSize: 14.sp,
                 //fontWeight: FontWeight.w700,
