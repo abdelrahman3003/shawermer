@@ -486,13 +486,8 @@ class HomeView extends StatelessWidget {
             ),
             Image.asset(AssetsImage.frame4),
             ElevatedButton(
-              onPressed: () async{
-                  String? path = await  controller.savePdf();
-                if (path != null) {
-                  await controller.printPdf(path);
-                }
-              
-              },
+              onPressed: ()  => controller.printDoc(),
+             
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.black,
                 minimumSize: const Size(
